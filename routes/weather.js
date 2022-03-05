@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  let weather = {
+  let weathers = {
     temp : '90.5',
     unit : 'fahrenheit',
     cloudy:' false',
@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
     
   }
 
-  res.send(weather);
+  res.send(weathers);
 });
 
 module.exports = router;
