@@ -1,18 +1,7 @@
 var express = require('express');
 var router = express.Router();
-
+const userController=require('../controllers/userscontroller');
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  let weathers = {
-    temp : 90.5,
-    unit : 'fahrenheit',
-    cloudy:' false',
-    precipitationChances: 0,
-
-    
-  }
-
-  res.send(weathers);
-});
+router.get('/', usersController.get_weathers);
 
 module.exports = router;
